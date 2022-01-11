@@ -5,16 +5,27 @@
   <meta charset="UTF-8">
   <!-- <meta name="viewport" content="width=device-width"> -->
   <title>Dishendra's Space</title>
+
 </head>
 
 <body>
 
   <div class="flex h-screen">
     <canvas class="absolute" id="cv"></canvas>
-    <div class="m-auto" id="termynal" data-termynal>
-      <span data-ty="input">Welcome to my space!</span>
-      <span data-ty="input">Initiating Journey...</span>
-      <span data-ty="progress"></span>
+
+    <div class="m-auto relative">
+
+      <div  id="termynal" data-termynal>
+        <span data-ty="input">Welcome to my space!</span>
+        <span data-ty="input">Ready to start the Journey ?</span>
+        <!-- <span data-ty="progress"></span> -->
+      </div><br>
+      <div class="flex justify-center">
+        <button id="yes" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+          Yes !
+        </button>
+      </div>
+    
     </div>
   </div>
 
@@ -26,4 +37,23 @@
 <script src="assets/js/starfield.js"></script>
 <script src="assets/js/termynal.js" data-termynal-container="#termynal"></script>
 
+<style>
+  #yes{
+  animation:8.5s ease 0s normal forwards 1 fadein;
+  -webkit-animation:8.5s ease 0s normal forwards 1 fadein;
+  opacity:1
+  }
+
+  @keyframes fadein{
+      0%{opacity:0}
+      80%{opacity:0}
+      100%{opacity:1}
+  }
+
+  @-webkit-keyframes fadein{
+      0%{opacity:0}
+      80%{opacity:0}
+      100%{opacity:1}
+  }
+</style>
 </html>
